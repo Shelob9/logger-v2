@@ -5,9 +5,20 @@ import netlifyIdentity from 'netlify-identity-widget'
 
 class App extends Component {
   constructor() {
-    super()
-
-    this.handleLogIn = this.handleLogIn.bind(this)
+    super();
+    this.state = {
+        user: {}
+    };
+    this.handleLogIn = this.handleLogIn.bind(this);
+	  netlifyIdentity.on("login", user =>{
+		  console.log(user);
+		  this.setState({user});
+	  });
+	  netlifyIdentity.on("init", user =>{
+		  console.log(user);
+		  this.setState({user});
+	  });
+	  netlifyIdentity.on("logout", user => this.setState({}));
   }
 
   handleLogIn () {
@@ -25,6 +36,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div>
+
           <button onClick={this.handleLogIn} >Log in with netlify</button>
         </div>
       </div>

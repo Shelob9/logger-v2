@@ -1,12 +1,20 @@
 {
-  "name": "react-identity-widget-demo",
-  "version": "0.1.0",
+  "name": "caldera-logger",
+  "version": "2.0.0-a.1",
   "private": true,
   "dependencies": {
+    "@caldera-labs/api-client": "^0.2.1",
+    "@caldera-labs/state": "^0.7.0",
     "netlify-identity-widget": "^1.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13"
+  },
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-jsx-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
